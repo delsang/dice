@@ -2,12 +2,14 @@ def players():
     # get names for each players
     names = []
     print("\n*** Welcome to the Dice!***\n")
-    players_names = input("\nWrite down each player's name, separated by a comma :\n")
-    players_names = players_names.split(',')
+    type_names = input("\nWrite down each player's name, separated by a comma :\n")
+    players_names = [ x.strip() for x in type_names.split(',')]
+    #players_names.split(',')..strip(' ')
+    #players_names = players_names(map(strip(' '), players_names))
 
     # get the names in an array
     for players_name in players_names:
         names.append(players_name)
 
-    
+
     return names
