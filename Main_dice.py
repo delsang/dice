@@ -17,17 +17,30 @@ def main():
             print(',', names[i], end ="")
         else:
             print(' and', names[len(names)-1], end ="")
-    print(", let's start playing!")
+    print(", let's start playing!\n")
 
-    #while True:
-    #    answer = free_or_prison().lower()
-    #    if answer == 'y':
-    #        dice_throw()
-    #    elif answer == 'quit':
-    #        exit()
-    #    else :
-    #        out_of_prison()
+    while True:
+        for i in range(len(names)):
 
+            if i != len(names)-1:
+                print(names[i], "It's your turn to play!\n")
+                answer = free_or_prison().lower()
+                if answer == 'y':
+                    dice_throw()
+                elif answer == 'quit':
+                    exit()
+                else :
+                    out_of_prison()
+
+            else:
+                print(names[len(names)-1], "It's your turn to play!")
+                answer = free_or_prison().lower()
+                if answer == 'y':
+                    dice_throw()
+                elif answer == 'quit':
+                    exit()
+                else :
+                    out_of_prison()
 
 # Call to main function to run the program
 if __name__ == "__main__":
